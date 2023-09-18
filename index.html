@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Usando o método fetch para requisição assíncronas em JavaScript</h1>
+        <div id="dados"></div>    
+    </body>
+</html>
+
+<script>
+    async function request(){
+        const reponse = await fetch('https://pokeapi.co/api/v2/pokemon/');
+        const object = await response.json();
+        document.querySelector("#dados").innerHTML = JSON.stringify(object);
+    }
+    request();
+</script>
